@@ -1,0 +1,1282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/cardMargin"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="काठमाडौं– बेलायतमा गरिएको एक अध्ययनअनुसार आधाभन्दा बढी युवायुवती विद्युतीय कारको प्रयोग गर्न चाहान्छन्।
+
+तर, पौढहरुको रोजाई भने इन्धनबाट चल्ने कार नै रहेको छ। कारहरुको कम्पनी एए ले गरेको एक सर्वाेक्षण अनुसार युवाहरु विद्युतीय कारतर्फ आकर्षित भएका छन् । यसले वायु प्रदूषण र जलवायु परिवर्तनका असरहरु काम गर्न सहयोग गर्ने विश्वास लिइएको छ।
+
+पौढलेभन्दा युवाहरुले पछिल्ला प्रविधिहरुको बढी प्रयोग गरेको पाइएको पनि सो अध्ययनले देखाएका छ । सरकारले सन् २०३० सम्मम कार्वत उत्र्सजन गर्ने गाडीहरुको बिक्रीमा ५० प्रतिशतले कमी ल्याउने घोषणा गरेको केही समयमा नै युवाहरुको रोजाई विद्युतीय कार रहेको खुलेको हो। करीब १० हजार व्यक्तिहरुको बीचमा गरेको सर्वेक्षणमा यस्तो नतिजा देखा परेको हो। सर्वेक्षणको क्रmममा ८५ प्रतिशतले सार्वजनिक स्थान चार्ज गर्ने पर्याप्त ठाउँहरु नभएको बताएका थिए । ७६ प्रतिशतले चाहि यो धेरै महंगा भएको बताएका थिए। पछिल्लो समयमा विभिन्न स्थानमा व्यापक मात्रामा चार्ज गर्ने केन्द्रहरु निर्माण गरिएको छ।"
+            />
+        <android.support.v7.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/categoryTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:text="भिडियाे" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/messi" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="3dp"
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="शृंखला "
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="१"
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/messi" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="3dp"
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="शृंखला "
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="१"
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/messi" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="3dp"
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="शृंखला "
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="१"
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/messi" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="3dp"
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="शृंखला "
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="१"
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/messi" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="3dp"
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="शृंखला "
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="१"
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/messi" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="3dp"
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="शृंखला "
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="१"
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/messi" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="3dp"
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="शृंखला "
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="१"
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/messi" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="3dp"
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="शृंखला "
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="१"
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/messi" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="3dp"
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="शृंखला "
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="१"
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#d1d1d1" />
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/fullc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            style="@style/categoryTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="See More"
+                            android:textAlignment="center"
+                            android:textColor="#717171"
+                            android:textSize="14sp" />
+                    </com.balysv.materialripple.MaterialRippleLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/categoryTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:text="अडियाे" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/messi" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="3dp"
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="शृंखला "
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="१"
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/messi" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="3dp"
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="शृंखला "
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="१"
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/messi" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="3dp"
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="शृंखला "
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="१"
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/messi" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="3dp"
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="शृंखला "
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="१"
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/messi" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="3dp"
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="शृंखला "
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="१"
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/messi" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="3dp"
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="शृंखला "
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="१"
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/messi" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="3dp"
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="शृंखला "
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="१"
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/messi" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="3dp"
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="शृंखला "
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="१"
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/messi" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="3dp"
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="शृंखला "
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/title1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+
+                                        android:layout_gravity="center"
+                                        android:scrollHorizontally="true"
+                                        android:text="१"
+                                        android:textColor="#f3252525"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#d1d1d1" />
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/fullc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            style="@style/categoryTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="See More"
+                            android:textAlignment="center"
+                            android:textColor="#717171"
+                            android:textSize="14sp" />
+                    </com.balysv.materialripple.MaterialRippleLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+
+</ScrollView>

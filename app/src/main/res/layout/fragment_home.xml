@@ -1,0 +1,1747 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_refresh_layout_category"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+
+            android:id="@+id/rel_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="230dp"
+                        android:background="#218b42"
+                        android:orientation="vertical"
+                        android:paddingTop="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="10dp"
+                            android:src="@drawable/hakahaki_plainwhite_logo" />
+
+                        <TextView
+                            android:id="@+id/front_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:text="..."
+                            android:textColor="@color/white_color"
+                            android:textSize="38sp" />
+
+                        <TextView
+                            android:id="@+id/front_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="right"
+                            android:layout_marginTop="12dp"
+                            android:paddingRight="12dp"
+                            android:text="..."
+                            android:textColor="@color/white_color"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/tajakhabar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="right"
+                            android:layout_marginTop="12dp"
+                            android:paddingRight="12dp"
+                            android:text="ताजा खबर"
+                            android:textColor="@color/white_color"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:clipToPadding="false"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/nefej"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:elevation="5dp"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#0071bd"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_gravity="center"
+                                    android:padding="10dp"
+                                    app:srcCompat="@drawable/nefec" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:text="@string/nefej"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white_color"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="परियाेजना सम्बन्धित"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white_color"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="कार्येक्रम "
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white_color"
+                                    android:textSize="10sp"
+                                    android:textStyle="italic" />
+
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/weather"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:elevation="10dp"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#00afda"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/city_field"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="Kathmandu , NP"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="12dp" />
+
+
+                                <TextView
+                                    android:id="@+id/details_field"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/weather_icon"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="Cloudy"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:orientation="horizontal">
+
+
+                                    <ImageView
+                                        android:layout_width="40sp"
+                                        android:layout_height="40sp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_marginLeft="5dp"
+                                        app:srcCompat="@drawable/ic_cloud_icon" />
+
+                                    <TextView
+                                        android:id="@+id/current_temperature_field"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="20 °C"
+                                        android:textAppearance="?android:attr/textAppearanceLarge"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="30sp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:clipToPadding="false"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/video"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground">
+
+                            <LinearLayout
+                                android:id="@+id/lnr_video"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#93c54c"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_gravity="center"
+                                    android:padding="10dp"
+                                    app:srcCompat="@drawable/video" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:text="@string/video"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white_color"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="श्रव्यदृश्य र डकुमेन्ट्री"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white_color"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="हेर्नुहोस"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white_color"
+                                    android:textSize="10sp"
+                                    android:textStyle="italic" />
+
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/music"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:elevation="10dp"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#41b296"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    android:padding="10dp"
+                                    app:srcCompat="@drawable/audio" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:text="@string/audio"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white_color"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="पोडकास्ट र रेडियो"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white_color"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="सुन्नुहोस"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white_color"
+                                    android:textSize="10sp"
+                                    android:textStyle="italic" />
+
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/notice"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#e77105"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="65dp"
+                                    android:layout_height="70dp"
+                                    android:layout_gravity="center"
+                                    android:padding="10dp"
+                                    app:srcCompat="@drawable/notice" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:text="@string/notice"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white_color"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="बिशेष जानकारीको"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white_color"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="निम्ति"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white_color"
+                                    android:textSize="10sp"
+                                    android:textStyle="italic" />
+
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/document"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:elevation="10dp"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#db1f1e"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_gravity="center"
+                                    android:padding="10dp"
+                                    app:srcCompat="@drawable/document" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:text="@string/document"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white_color"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ऐन नियम, अध्ययन"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white_color"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="खोजमुलक"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white_color"
+                                    android:textSize="10sp"
+                                    android:textStyle="italic" />
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp" />
+
+
+                <LinearLayout
+                    android:id="@+id/lnrlayoutNews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_view_mainNews1"
+                        style="@style/cardMargin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                style="@style/category_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/gradient"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/hakahaki_plainwhite_logo" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="50dp"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="5dp">
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/app_name"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="25dp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="15dp"
+                                            android:layout_height="15dp"
+                                            android:layout_centerVertical="true"
+                                            app:srcCompat="@drawable/time" />
+
+                                        <TextView
+                                            android:id="@+id/mainNews1_date"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="20dp"
+                                            android:text="8 hours ago"
+                                            android:textSize="12sp" />
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/mainNews1_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/messi" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:id="@+id/mainNews1_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:scrollHorizontally="true"
+                                    android:text="Messi Foundation supports building 14 health posts in Nepal"
+                                    android:textColor="@color/grey_dark"
+                                    android:textStyle="bold"
+
+                                    />
+
+                                <TextView
+                                    android:id="@+id/mainNews1_content"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:maxLines="3"
+                                    android:paddingBottom="10dp"
+                                    android:scrollHorizontally="true"
+                                    android:text="KATHMANDU/GORKHA, Aug 7: Argentine football superstar Lionel Messi’s charity organization The Leo Messi Foundation, in association with UNICEF Nepal, has supported building 14 health posts in earthquake-affected districts of Nepal. "
+                                    android:textColor="@color/grey_hard"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_view_mainNews2"
+                        style="@style/cardMargin"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                style="@style/category_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/gradient"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/hakahaki_plainwhite_logo" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="50dp"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="5dp">
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_toEndOf="@+id/news_logo1"
+                                        android:layout_toRightOf="@+id/news_logo1"
+                                        android:text="@string/app_name"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="25dp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="15dp"
+                                            android:layout_height="15dp"
+                                            android:layout_centerVertical="true"
+                                            app:srcCompat="@drawable/time" />
+
+                                        <TextView
+                                            android:id="@+id/mainNews2_date"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="20dp"
+                                            android:text="8 hours ago"
+                                            android:textSize="12sp" />
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+
+                                android:minHeight="50dp"
+                                android:orientation="horizontal"
+                                android:paddingBottom="10dp"
+                                android:paddingRight="10dp">
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="top"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="10dp">
+
+                                    <TextView
+                                        android:id="@+id/mainNews2_title"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:paddingRight="10dp"
+                                        android:scrollHorizontally="true"
+                                        android:text="Messi Foundation supports building 14 health posts in Nepal"
+                                        android:textColor="@color/grey_dark"
+
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/mainNews2_content"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_gravity="start"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_weight="1"
+                                        android:ellipsize="end"
+                                        android:maxLines="3"
+                                        android:paddingRight="10dp"
+                                        android:text="KATHMANDU/GORKHA, Aug 7: Argentine football superstar Lionel Messi’s charity organization The Leo Messi Foundation, in association with UNICEF Nepal, has supported building 14 health posts in earthquake-affected districts of Nepal. "
+                                        android:textAlignment="textStart"
+                                        android:textColor="@color/grey_hard"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:background="@color/white_color">
+
+
+                                    <ImageView
+                                        android:id="@+id/mainNews2_image"
+                                        android:layout_width="@dimen/news_row_img"
+                                        android:layout_height="@dimen/news_row_img"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/messi" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_view_mainNews3"
+                        style="@style/cardMargin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                style="@style/category_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/gradient"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/hakahaki_plainwhite_logo" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="50dp"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="5dp">
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_toEndOf="@+id/news_logo1"
+                                        android:layout_toRightOf="@+id/news_logo1"
+                                        android:text="@string/app_name"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="25dp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="15dp"
+                                            android:layout_height="15dp"
+                                            android:layout_centerVertical="true"
+                                            app:srcCompat="@drawable/time" />
+
+                                        <TextView
+                                            android:id="@+id/mainNews3_date"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="20dp"
+                                            android:text="8 hours ago"
+                                            android:textSize="12sp" />
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/mainNews3_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/messi" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:id="@+id/mainNews3_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:scrollHorizontally="true"
+                                    android:text="Messi Foundation supports building 14 health posts in Nepal"
+                                    android:textColor="@color/grey_dark"
+                                    android:textStyle="bold"
+
+                                    />
+
+                                <TextView
+                                    android:id="@+id/mainNews3_content"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:maxLines="3"
+                                    android:paddingBottom="10dp"
+                                    android:scrollHorizontally="true"
+                                    android:text="KATHMANDU/GORKHA, Aug 7: Argentine football superstar Lionel Messi’s charity organization The Leo Messi Foundation, in association with UNICEF Nepal, has supported building 14 health posts in earthquake-affected districts of Nepal. "
+                                    android:textColor="@color/grey_hard"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_view_mainNews4"
+                        style="@style/cardMargin"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                style="@style/category_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/gradient"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/hakahaki_plainwhite_logo" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="50dp"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="5dp">
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_toEndOf="@+id/news_logo1"
+                                        android:layout_toRightOf="@+id/news_logo1"
+                                        android:text="@string/app_name"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="25dp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="15dp"
+                                            android:layout_height="15dp"
+                                            android:layout_centerVertical="true"
+                                            app:srcCompat="@drawable/time" />
+
+                                        <TextView
+                                            android:id="@+id/mainNews4_date"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginStart="20dp"
+                                            android:text="8 hours ago"
+                                            android:textSize="12sp" />
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+
+                                android:minHeight="50dp"
+                                android:orientation="horizontal"
+                                android:paddingBottom="10dp"
+                                android:paddingRight="10dp">
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="top"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="10dp">
+
+                                    <TextView
+                                        android:id="@+id/mainNews4_title"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:paddingRight="10dp"
+                                        android:scrollHorizontally="true"
+                                        android:text="Messi Foundation supports building 14 health posts in Nepal"
+                                        android:textColor="@color/grey_dark"
+
+                                        android:textStyle="bold" />
+
+                                    <TextView
+
+                                        android:id="@+id/mainNews4_content"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_gravity="start"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_weight="1"
+                                        android:ellipsize="end"
+                                        android:maxLines="3"
+                                        android:paddingRight="10dp"
+                                        android:text="KATHMANDU/GORKHA, Aug 7: Argentine football superstar Lionel Messi’s charity organization The Leo Messi Foundation, in association with UNICEF Nepal, has supported building 14 health posts in earthquake-affected districts of Nepal. "
+                                        android:textAlignment="textStart"
+                                        android:textColor="@color/grey_hard"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:background="@color/white_color">
+
+
+                                    <ImageView
+                                        android:id="@+id/mainNews4_image"
+                                        android:layout_width="@dimen/news_row_img"
+                                        android:layout_height="@dimen/news_row_img"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/messi" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        style="@style/cardMargin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        app:cardCornerRadius="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/bisheshsamachar_header"
+                                style="@style/categoryTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="बिशेष समाचार " />
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+
+                                style="@style/RippleStyleBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp">
+
+                                <LinearLayout
+                                    android:id="@+id/mtrl_main2_news1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:minHeight="30dp"
+                                        android:orientation="horizontal"
+                                        android:padding="@dimen/spacing_middle">
+
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/grey_medium">
+
+
+                                            <ImageView
+                                                android:layout_width="@dimen/spacing_xlarge"
+                                                android:layout_height="@dimen/spacing_xlarge"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_image"
+                                                android:tint="@color/grey_hard" />
+
+                                            <ImageView
+                                                android:id="@+id/ent_img1"
+                                                android:layout_width="@dimen/news_row_img"
+                                                android:layout_height="@dimen/news_row_img"
+                                                android:scaleType="centerCrop"
+                                                android:src="@drawable/messi" />
+
+                                        </RelativeLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="top"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/ent_title1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:maxLines="2"
+                                                android:text="चीन सरकारलाई उपहार दिने भनिएको एक जोडी गैंडाको "
+                                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                                android:textColor="@color/grey_dark"
+                                                android:textStyle="bold" />
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center_vertical"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="@dimen/spacing_large"
+                                                    android:layout_height="@dimen/spacing_large"
+                                                    android:layout_marginRight="@dimen/spacing_small"
+                                                    android:src="@drawable/ic_date"
+                                                    android:tint="@color/grey_hard" />
+
+                                                <TextView
+                                                    android:id="@+id/ent_date1"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="8 hours ago"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                                    android:textColor="@color/grey_hard" />
+
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1px"
+                                        android:layout_marginLeft="@dimen/spacing_middle"
+                                        android:layout_marginRight="@dimen/spacing_middle"
+                                        android:background="@color/grey_bg" />
+
+                                </LinearLayout>
+
+                            </com.balysv.materialripple.MaterialRippleLayout>
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+
+                                style="@style/RippleStyleBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp">
+
+                                <LinearLayout
+                                    android:id="@+id/mtrl_main2_news2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:minHeight="30dp"
+                                        android:orientation="horizontal"
+                                        android:padding="@dimen/spacing_middle">
+
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/grey_medium">
+
+                                            <ImageView
+                                                android:layout_width="@dimen/spacing_xlarge"
+                                                android:layout_height="@dimen/spacing_xlarge"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_image"
+                                                android:tint="@color/grey_hard" />
+
+                                            <ImageView
+                                                android:id="@+id/ent_img2"
+                                                android:layout_width="@dimen/news_row_img"
+                                                android:layout_height="@dimen/news_row_img"
+                                                android:scaleType="centerCrop"
+                                                android:src="@drawable/messi" />
+
+                                        </RelativeLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="top"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/ent_title2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:maxLines="2"
+                                                android:text="चीन सरकारलाई उपहार दिने भनिएको एक जोडी गैंडाको "
+                                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                                android:textColor="@color/grey_dark"
+                                                android:textStyle="bold" />
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center_vertical"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="@dimen/spacing_large"
+                                                    android:layout_height="@dimen/spacing_large"
+                                                    android:layout_marginRight="@dimen/spacing_small"
+                                                    android:src="@drawable/ic_date"
+                                                    android:tint="@color/grey_hard" />
+
+                                                <TextView
+                                                    android:id="@+id/ent_date2"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="8 hours ago"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                                    android:textColor="@color/grey_hard" />
+
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1px"
+                                        android:layout_marginLeft="@dimen/spacing_middle"
+                                        android:layout_marginRight="@dimen/spacing_middle"
+                                        android:background="@color/grey_bg" />
+
+                                </LinearLayout>
+
+                            </com.balysv.materialripple.MaterialRippleLayout>
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+
+                                style="@style/RippleStyleBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp">
+
+                                <LinearLayout
+                                    android:id="@+id/mtrl_main2_news3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:minHeight="30dp"
+                                        android:orientation="horizontal"
+                                        android:padding="@dimen/spacing_middle">
+
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/grey_medium">
+
+                                            <ImageView
+                                                android:layout_width="@dimen/spacing_xlarge"
+                                                android:layout_height="@dimen/spacing_xlarge"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_image"
+                                                android:tint="@color/grey_hard" />
+
+                                            <ImageView
+                                                android:id="@+id/ent_img3"
+                                                android:layout_width="@dimen/news_row_img"
+                                                android:layout_height="@dimen/news_row_img"
+                                                android:layout_alignParentTop="true"
+                                                android:scaleType="centerCrop"
+                                                android:src="@drawable/messi" />
+
+                                        </RelativeLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="top"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/ent_title3"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:maxLines="2"
+                                                android:text="चीन सरकारलाई उपहार दिने भनिएको एक जोडी गैंडाको "
+                                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                                android:textColor="@color/grey_dark"
+                                                android:textStyle="bold" />
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center_vertical"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="@dimen/spacing_large"
+                                                    android:layout_height="@dimen/spacing_large"
+                                                    android:layout_marginRight="@dimen/spacing_small"
+                                                    android:src="@drawable/ic_date"
+                                                    android:tint="@color/grey_hard" />
+
+                                                <TextView
+                                                    android:id="@+id/ent_date3"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="8 hours ago"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                                    android:textColor="@color/grey_hard" />
+
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1px"
+                                        android:layout_marginLeft="@dimen/spacing_middle"
+                                        android:layout_marginRight="@dimen/spacing_middle"
+                                        android:background="@color/grey_bg" />
+
+                                </LinearLayout>
+
+                            </com.balysv.materialripple.MaterialRippleLayout>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#d1d1d1" />
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/readmore"
+                                    style="@style/categoryTitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="थप समाचार"
+                                    android:textAlignment="center"
+                                    android:textSize="14sp" />
+                            </com.balysv.materialripple.MaterialRippleLayout>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        style="@style/cardMargin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/bisheshreport_header"
+                                style="@style/categoryTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="लोकप्रिय " />
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+
+                                style="@style/RippleStyleBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp">
+
+                                <LinearLayout
+                                    android:id="@+id/mtrl_main3_news1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:minHeight="30dp"
+                                        android:orientation="horizontal"
+                                        android:padding="@dimen/spacing_middle">
+
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/grey_medium">
+
+                                            <ImageView
+                                                android:layout_width="@dimen/spacing_xlarge"
+                                                android:layout_height="@dimen/spacing_xlarge"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_image"
+                                                android:tint="@color/grey_hard" />
+
+                                            <ImageView
+                                                android:id="@+id/report_img1"
+                                                android:layout_width="@dimen/news_row_img"
+                                                android:layout_height="@dimen/news_row_img"
+                                                android:scaleType="centerCrop"
+                                                android:src="@drawable/messi" />
+
+                                        </RelativeLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="top"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/report_title1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:maxLines="2"
+                                                android:text="चीन सरकारलाई उपहार दिने भनिएको एक जोडी गैंडाको "
+                                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                                android:textColor="@color/grey_dark"
+                                                android:textStyle="bold" />
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center_vertical"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="@dimen/spacing_large"
+                                                    android:layout_height="@dimen/spacing_large"
+                                                    android:layout_marginRight="@dimen/spacing_small"
+                                                    android:src="@drawable/ic_date"
+                                                    android:tint="@color/grey_hard" />
+
+                                                <TextView
+                                                    android:id="@+id/report_date1"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="8 hours ago"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                                    android:textColor="@color/grey_hard" />
+
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1px"
+                                        android:layout_marginLeft="@dimen/spacing_middle"
+                                        android:layout_marginRight="@dimen/spacing_middle"
+                                        android:background="@color/grey_bg" />
+
+                                </LinearLayout>
+
+                            </com.balysv.materialripple.MaterialRippleLayout>
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+                                style="@style/RippleStyleBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp">
+
+                                <LinearLayout
+                                    android:id="@+id/mtrl_main3_news2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:minHeight="30dp"
+                                        android:orientation="horizontal"
+                                        android:padding="@dimen/spacing_middle">
+
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/grey_medium">
+
+                                            <ImageView
+                                                android:layout_width="@dimen/spacing_xlarge"
+                                                android:layout_height="@dimen/spacing_xlarge"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_image"
+                                                android:tint="@color/grey_hard" />
+
+                                            <ImageView
+                                                android:id="@+id/report_img2"
+                                                android:layout_width="@dimen/news_row_img"
+                                                android:layout_height="@dimen/news_row_img"
+                                                android:scaleType="centerCrop"
+                                                android:src="@drawable/messi" />
+
+                                        </RelativeLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="top"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/report_title2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:maxLines="2"
+                                                android:text="चीन सरकारलाई उपहार दिने भनिएको एक जोडी गैंडाको "
+                                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                                android:textColor="@color/grey_dark"
+                                                android:textStyle="bold" />
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center_vertical"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="@dimen/spacing_large"
+                                                    android:layout_height="@dimen/spacing_large"
+                                                    android:layout_marginRight="@dimen/spacing_small"
+                                                    android:src="@drawable/ic_date"
+                                                    android:tint="@color/grey_hard" />
+
+                                                <TextView
+                                                    android:id="@+id/report_date2"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="8 hours ago"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                                    android:textColor="@color/grey_hard" />
+
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1px"
+                                        android:layout_marginLeft="@dimen/spacing_middle"
+                                        android:layout_marginRight="@dimen/spacing_middle"
+                                        android:background="@color/grey_bg" />
+
+                                </LinearLayout>
+
+                            </com.balysv.materialripple.MaterialRippleLayout>
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+
+                                style="@style/RippleStyleBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp">
+
+                                <LinearLayout
+                                    android:id="@+id/mtrl_main3_news3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:minHeight="30dp"
+                                        android:orientation="horizontal"
+                                        android:padding="@dimen/spacing_middle">
+
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/grey_medium">
+
+                                            <ImageView
+                                                android:layout_width="@dimen/spacing_xlarge"
+                                                android:layout_height="@dimen/spacing_xlarge"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_image"
+                                                android:tint="@color/grey_hard" />
+
+                                            <ImageView
+                                                android:id="@+id/report_img3"
+                                                android:layout_width="@dimen/news_row_img"
+                                                android:layout_height="@dimen/news_row_img"
+                                                android:layout_alignParentTop="true"
+                                                android:scaleType="centerCrop"
+                                                android:src="@drawable/messi" />
+
+                                        </RelativeLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="top"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/report_title3"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:maxLines="2"
+                                                android:text="चीन सरकारलाई उपहार दिने भनिएको एक जोडी गैंडाको "
+                                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                                android:textColor="@color/grey_dark"
+                                                android:textStyle="bold" />
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center_vertical"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="@dimen/spacing_large"
+                                                    android:layout_height="@dimen/spacing_large"
+                                                    android:layout_marginRight="@dimen/spacing_small"
+                                                    android:src="@drawable/ic_date"
+                                                    android:tint="@color/grey_hard" />
+
+                                                <TextView
+                                                    android:id="@+id/report_date3"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="8 hours ago"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                                    android:textColor="@color/grey_hard" />
+
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1px"
+                                        android:layout_marginLeft="@dimen/spacing_middle"
+                                        android:layout_marginRight="@dimen/spacing_middle"
+                                        android:background="@color/grey_bg" />
+
+                                </LinearLayout>
+
+                            </com.balysv.materialripple.MaterialRippleLayout>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#d1d1d1" />
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/report_readmore"
+                                    style="@style/categoryTitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="थप समाचार "
+                                    android:textAlignment="center"
+                                    android:textSize="14sp" />
+                            </com.balysv.materialripple.MaterialRippleLayout>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar2"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="92dp"
+                    android:layout_marginTop="16dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>
+
