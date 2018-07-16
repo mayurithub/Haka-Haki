@@ -54,6 +54,8 @@ public class NEEFEJDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_list);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         swipe_refresh = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout_category);
         Intent intent = getIntent();
         rel_container = (RelativeLayout) findViewById(R.id.rel_container);

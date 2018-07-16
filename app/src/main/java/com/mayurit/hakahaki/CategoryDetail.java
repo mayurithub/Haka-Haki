@@ -56,6 +56,8 @@ public class CategoryDetail extends AppCompatActivity {
         setContentView(R.layout.activity_category_list);
         swipe_refresh = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout_category);
         Intent intent = getIntent();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         category_id= intent.getExtras().getInt("category_id");
         rel_container = (RelativeLayout) findViewById(R.id.rel_container);
         swipeProgress(true);

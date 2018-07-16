@@ -51,6 +51,8 @@ public class ActivityProjectDetail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_detail);
         Intent intent = getIntent();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         post = (ProjectModel) getIntent().getSerializableExtra(EXTRA_OBJC);
 
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

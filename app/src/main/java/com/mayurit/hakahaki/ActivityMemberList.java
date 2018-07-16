@@ -5,23 +5,21 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.webkit.WebView;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mayurit.hakahaki.Adapters.CategoryNewsListAdapter;
+import com.mayurit.hakahaki.Adapters.MemberAdapter;
 import com.mayurit.hakahaki.Helpers.Constant;
 import com.mayurit.hakahaki.Helpers.RecyclerItemClickListener;
 import com.mayurit.hakahaki.Helpers.RetrofitAPI;
@@ -35,7 +33,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ActivityPostTypeList extends AppCompatActivity {
+public class ActivityMemberList extends AppCompatActivity {
     public static final String EXTRA_OBJC = "key.EXTRA_OBJC";
     String postType;
 
@@ -48,7 +46,7 @@ public class ActivityPostTypeList extends AppCompatActivity {
     int category_id;
     SwipeRefreshLayout swipe_refresh;
 
-    CategoryNewsListAdapter mAdapter;
+    MemberAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,29 +77,10 @@ public class ActivityPostTypeList extends AppCompatActivity {
         recyclerView.setFocusable(false);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(mLayoutManager);
-        mAdapter = new CategoryNewsListAdapter(this, list, recyclerView);
+        mAdapter = new MemberAdapter(this, list, recyclerView);
         recyclerView.setAdapter(mAdapter);
         recyclerView.setNestedScrollingEnabled(false);
-        recyclerView.addOnItemTouchListener(
-                new RecyclerItemClickListener(getApplicationContext(), recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(View view, int position) {
 
-                        NewsListModel singleItem = list.get(position);
-                        Intent intent = new Intent(ActivityPostTypeList.this, ActivityPostTypeDetail.class);
-                        intent.putExtra(EXTRA_OBJC, (Serializable) singleItem);
-                        intent.putExtra("post_id",singleItem.getID());
-                        intent.putExtra("post_type",postType);
-                        startActivity(intent);
-
-                    }
-
-                    @Override
-                    public void onLongItemClick(final View view, final int position) {
-
-                    }
-                })
-        );
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
@@ -120,7 +99,7 @@ public class ActivityPostTypeList extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         // detect when scroll reach bottom
-        mAdapter.setOnLoadMoreListener(new CategoryNewsListAdapter.OnLoadMoreListener() {
+        mAdapter.setOnLoadMoreListener(new MemberAdapter.OnLoadMoreListener() {
             @Override
             public void onLoadMore(int current_page) {
                 totalRowsCategeory += Constant.CATEGORY_LIMIT;
@@ -194,7 +173,7 @@ public class ActivityPostTypeList extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<NewsListModel>> call, Throwable throwable) {
-                Toast.makeText(ActivityPostTypeList.this, "Failed to load", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ActivityMemberList.this, "Failed to load", Toast.LENGTH_SHORT).show();
             }
         });
 
