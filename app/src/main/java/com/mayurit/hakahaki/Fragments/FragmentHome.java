@@ -119,6 +119,7 @@ SwipeRefreshLayout swipe_refresh;
 
     String toolbartitle = "Home";
 
+    //changes for aquery for images
     public FragmentHome() {
         // Required empty public constructor
     }
