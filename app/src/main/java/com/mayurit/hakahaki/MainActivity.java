@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -50,16 +51,17 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        changeFragment(FragmentHome.newInstance());
+//        changeFragment(FragmentHome.newInstance());
+        changeToHomeFragment();
     }
-    boolean doubleBackToExitPressedOnce = false;
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-
+            FragmentHome homeFragment = (FragmentHome) getSupportFragmentManager().findFragmentByTag(getString(R.string.app_name));
+            if (homeFragment != null && homeFragment.isVisible()) {
                 if (doubleBackToExitPressedOnce) {
                     ActivityCompat.finishAffinity(MainActivity.this);
                     return;
@@ -75,34 +77,50 @@ public class MainActivity extends AppCompatActivity
                         doubleBackToExitPressedOnce = false;
                     }
                 }, 2000);
+            } else {
 
+                super.onBackPressed();
+                FragmentManager fm = getSupportFragmentManager();
+            }
 
         }
 
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
+    boolean doubleBackToExitPressedOnce = false;
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.main, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        /*//noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
+//
+//         if (id == R.id.action_refresh) {
+//            android.app.Fragment f = getFragmentManager().findFragmentById(R.id.fragment_container);
+//
+////            changeFragment(f);
+//            return true;
+//        }*/
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 
-        return super.onOptionsItemSelected(item);
-    }
+
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -186,8 +204,19 @@ public class MainActivity extends AppCompatActivity
     public void changeFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_container, fragment);
+        transaction.addToBackStack(null);
         transaction.commit();
 
     }
+
+    public void changeToHomeFragment() {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, FragmentHome.newInstance(),getString(R.string.app_name));
+        transaction.addToBackStack(null);
+        transaction.commit();
+
+    }
+
+
 
 }

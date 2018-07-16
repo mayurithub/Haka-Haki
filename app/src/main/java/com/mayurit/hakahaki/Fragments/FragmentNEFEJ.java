@@ -15,6 +15,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -22,6 +25,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mayurit.hakahaki.ActivityMemberList;
 import com.mayurit.hakahaki.ActivityPostDetail;
 import com.mayurit.hakahaki.ActivityPostTypeDetail;
 import com.mayurit.hakahaki.ActivityPostTypeList;
@@ -99,12 +103,12 @@ public class FragmentNEFEJ extends Fragment implements View.OnClickListener {
                 ((MainActivity) getActivity()).changeFragment(FragmentProject.newInstance());
                 break;
             case R.id.lnr_board_member:
-                intent = new Intent(context, ActivityPostTypeList.class);
+                intent = new Intent(context, ActivityMemberList.class);
                 intent.putExtra(EXTRA_OBJC, "member");
                 startActivity(intent);
                 break;
             case R.id.lnr_employee:
-                intent = new Intent(context, ActivityPostTypeList.class);
+                intent = new Intent(context, ActivityMemberList.class);
                 intent.putExtra(EXTRA_OBJC, "employee");
                 startActivity(intent);
                 break;
@@ -118,5 +122,28 @@ public class FragmentNEFEJ extends Fragment implements View.OnClickListener {
                 break;
         }
 
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        getActivity().getMenuInflater().inflate(R.menu.main, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        if (id == R.id.action_refresh) {
+            Toast.makeText(context, "Neefej Fragment", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

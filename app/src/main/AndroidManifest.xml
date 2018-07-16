@@ -40,9 +40,9 @@
         <activity android:name=".Model.Videoplay" />
         <activity android:name=".ActivityPostTypeList" />
         <activity android:name=".ActivityAudio"></activity>
-        <activity android:name=".Seek">
+        <activity android:name=".ActivityMemberList"></activity>
+        <activity android:name=".Seek"/>
 
-        </activity>
     </application>
 
 </manifest>
