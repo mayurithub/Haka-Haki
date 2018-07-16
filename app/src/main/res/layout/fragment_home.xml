@@ -498,7 +498,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:visibility="gone">
+                    android:visibility="visible">
 
 
                     <android.support.v7.widget.CardView
@@ -1056,7 +1056,7 @@
 
                                 style="@style/RippleStyleBlack"
                                 android:layout_width="match_parent"
-                                android:layout_height="80dp">
+                                android:layout_height="90dp">
 
                                 <LinearLayout
                                     android:id="@+id/mtrl_main2_news1"
@@ -1067,8 +1067,8 @@
 
                                     <LinearLayout
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:minHeight="30dp"
+                                        android:layout_height="184dp"
+                                        android:minHeight="50dp"
                                         android:orientation="horizontal"
                                         android:padding="@dimen/spacing_middle">
 
@@ -1159,7 +1159,7 @@
 
                                 style="@style/RippleStyleBlack"
                                 android:layout_width="match_parent"
-                                android:layout_height="80dp">
+                                android:layout_height="90dp">
 
                                 <LinearLayout
                                     android:id="@+id/mtrl_main2_news2"
@@ -1171,7 +1171,7 @@
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:minHeight="30dp"
+                                        android:minHeight="50dp"
                                         android:orientation="horizontal"
                                         android:padding="@dimen/spacing_middle">
 
@@ -1261,7 +1261,7 @@
 
                                 style="@style/RippleStyleBlack"
                                 android:layout_width="match_parent"
-                                android:layout_height="80dp">
+                                android:layout_height="90dp">
 
                                 <LinearLayout
                                     android:id="@+id/mtrl_main2_news3"
@@ -1273,7 +1273,7 @@
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:minHeight="30dp"
+                                        android:minHeight="50dp"
                                         android:orientation="horizontal"
                                         android:padding="@dimen/spacing_middle">
 
@@ -1405,7 +1405,7 @@
 
                                 style="@style/RippleStyleBlack"
                                 android:layout_width="match_parent"
-                                android:layout_height="80dp">
+                                android:layout_height="90dp">
 
                                 <LinearLayout
                                     android:id="@+id/mtrl_main3_news1"
@@ -1417,7 +1417,7 @@
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:minHeight="30dp"
+                                        android:minHeight="50dp"
                                         android:orientation="horizontal"
                                         android:padding="@dimen/spacing_middle">
 
@@ -1506,7 +1506,7 @@
                             <com.balysv.materialripple.MaterialRippleLayout
                                 style="@style/RippleStyleBlack"
                                 android:layout_width="match_parent"
-                                android:layout_height="80dp">
+                                android:layout_height="90dp">
 
                                 <LinearLayout
                                     android:id="@+id/mtrl_main3_news2"
@@ -1518,7 +1518,7 @@
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:minHeight="30dp"
+                                        android:minHeight="50dp"
                                         android:orientation="horizontal"
                                         android:padding="@dimen/spacing_middle">
 
@@ -1608,7 +1608,7 @@
 
                                 style="@style/RippleStyleBlack"
                                 android:layout_width="match_parent"
-                                android:layout_height="80dp">
+                                android:layout_height="90dp">
 
                                 <LinearLayout
                                     android:id="@+id/mtrl_main3_news3"
@@ -1620,7 +1620,7 @@
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:minHeight="30dp"
+                                        android:minHeight="50dp"
                                         android:orientation="horizontal"
                                         android:padding="@dimen/spacing_middle">
 
