@@ -136,6 +136,11 @@ public class MainActivity extends AppCompatActivity
         }else if (id == R.id.nav_feedback) {
             changeFragment(FragmentFeedback.newInstance());
         }
+        else if (id == R.id.nav_setting) {
+
+            intent = new Intent(MainActivity.this,Seek.class);
+            startActivity(intent);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
