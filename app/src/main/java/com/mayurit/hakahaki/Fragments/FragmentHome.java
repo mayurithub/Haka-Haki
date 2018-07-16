@@ -121,6 +121,7 @@ public class FragmentHome extends Fragment implements View.OnClickListener {
 
     String toolbartitle;
 
+    //changes for aquery for images
     public FragmentHome() {
         // Required empty public constructor
     }
