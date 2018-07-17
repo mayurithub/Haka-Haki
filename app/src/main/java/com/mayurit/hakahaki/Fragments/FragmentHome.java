@@ -15,6 +15,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.balysv.materialripple.MaterialRippleLayout;
@@ -40,6 +42,7 @@ import com.mayurit.hakahaki.Helpers.DatabaseHelper;
 import com.mayurit.hakahaki.Helpers.RetrofitAPI;
 import com.mayurit.hakahaki.MainActivity;
 import com.mayurit.hakahaki.Model.DateModel;
+
 import com.mayurit.hakahaki.Model.NewsListModel;
 
 import com.mayurit.hakahaki.NEEFEJDetail;
@@ -110,15 +113,16 @@ public class FragmentHome extends Fragment implements View.OnClickListener {
     RelativeLayout rel_container;
     Fragment fragment;
     View view;
-SwipeRefreshLayout swipe_refresh;
+    SwipeRefreshLayout swipe_refresh;
     ProgressBar progressBar;
 
     //changes now
     private RecyclerView recyclerView;
     CategoryAdapter mAdapter;
 
-    String toolbartitle = "Home";
+    String toolbartitle;
 
+    //changes for aquery for images
     public FragmentHome() {
         // Required empty public constructor
     }
@@ -143,7 +147,8 @@ SwipeRefreshLayout swipe_refresh;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        setHasOptionsMenu(true);
+        toolbarTitle = getString(R.string.app_name);
         view = inflater.inflate(R.layout.fragment_home, null);
 
         category_id = 34;
@@ -153,8 +158,8 @@ SwipeRefreshLayout swipe_refresh;
         initSecondCategorySection();
         initThirdCategorySection();
         fetchDate();
-swipe_refresh =  view.findViewById(R.id.swipe_refresh_layout_category);
-   swipeProgress(true);
+        swipe_refresh = view.findViewById(R.id.swipe_refresh_layout_category);
+        swipeProgress(true);
         swipe_refresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -189,7 +194,8 @@ swipe_refresh =  view.findViewById(R.id.swipe_refresh_layout_category);
         return view;
 
     }
-	 private void swipeProgress(final boolean show) {
+
+    private void swipeProgress(final boolean show) {
         if (!show) {
             swipe_refresh.setRefreshing(show);
             return;
@@ -317,7 +323,7 @@ swipe_refresh =  view.findViewById(R.id.swipe_refresh_layout_category);
                 list.clear();
                 list.addAll(response.body());
                 display(list);
-                databaseHelper.delete(""+category_id);
+                databaseHelper.delete("" + category_id);
 
                 lnrlayoutNews.setVisibility(View.VISIBLE);
                 progressBar.setVisibility(View.GONE);
@@ -351,7 +357,7 @@ swipe_refresh =  view.findViewById(R.id.swipe_refresh_layout_category);
                 list1.clear();
                 list1.addAll(response.body());
                 display2(list1);
-                databaseHelper.delete(""+category_id2);
+                databaseHelper.delete("" + category_id2);
 
                 for (NewsListModel info : list1) {
                     ContentValues cv = new ContentValues();
@@ -380,7 +386,7 @@ swipe_refresh =  view.findViewById(R.id.swipe_refresh_layout_category);
                 list2.clear();
                 list2.addAll(response.body());
                 display3(list2);
-                databaseHelper.delete(""+category_id3);
+                databaseHelper.delete("" + category_id3);
 
                 for (NewsListModel info : list2) {
                     ContentValues cv = new ContentValues();
@@ -406,16 +412,16 @@ swipe_refresh =  view.findViewById(R.id.swipe_refresh_layout_category);
             netCheck();
         } else {
             list = databaseHelper.getQAList("" + category_id);
-            if(list.size()!=0)
-            display(list);
+            if (list.size() != 0)
+                display(list);
 
             list1 = databaseHelper.getQAList("" + category_id2);
-            if(list1.size()!=0)
-            display2(list1);
+            if (list1.size() != 0)
+                display2(list1);
 
             list2 = databaseHelper.getQAList("" + category_id3);
-            if(list2.size()!=0)
-            display3(list2);
+            if (list2.size() != 0)
+                display3(list2);
             lnrlayoutNews.setVisibility(View.VISIBLE);
         }
 
@@ -472,7 +478,7 @@ swipe_refresh =  view.findViewById(R.id.swipe_refresh_layout_category);
         main_news2.setOnClickListener(this);
         main_news3.setOnClickListener(this);
         main_news4.setOnClickListener(this);
-			 swipeProgress(false);
+        swipeProgress(false);
     }
 
     private void display2(List<NewsListModel> list1) {
@@ -636,7 +642,29 @@ swipe_refresh =  view.findViewById(R.id.swipe_refresh_layout_category);
     private void displaydate() {
         front_date.setText(dlist.getPostDate());
         front_time.setText(dlist.getPostTime());
-			swipeProgress(false);
+        swipeProgress(false);
     }
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        getActivity().getMenuInflater().inflate(R.menu.main, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        if (id == R.id.action_refresh) {
+            ((MainActivity) getActivity()).changeFragment(FragmentHome.newInstance());
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }

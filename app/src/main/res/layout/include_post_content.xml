@@ -152,7 +152,7 @@ android:id="@+id/like"
                     <TextView android:id="@+id/date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2 hr ago"
+                        android:text="..."
                         android:textColor="@color/text_color_primary"
                         android:textSize="10sp" />
 

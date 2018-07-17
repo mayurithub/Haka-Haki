@@ -13,7 +13,7 @@
     <string name="notice">सूचना</string>
     <string name="document">दस्ताबेज</string>
     <string name="download">download</string>
-    <string name="category">Category</string>
+    <string name="category">समाचार </string>
     <string name="paani">पानी</string>
     <string name="rate_us">Rate Us</string>
     <string name="home">Home</string>
@@ -120,13 +120,14 @@
 
     <string name="player_error">player_error</string>
     <string name="rules_regulations"><![CDATA[Rules & Regulations]]></string>
-    <string name="pani">Pani</string>
+    <string name="pani">पानी</string>
     <string name="ankhijhyal">Ankhijhyal</string>
     <string name="naya_pusta">Naya Pusta</string>
     <string name="documentary">Documentary</string>
     <string name="sp_project">SP project</string>
     <string name="crtn_project">CRTN Project</string>
     <string name="feedback">Feedback</string>
+    <string name="action_refresh">Refresh</string>
 
     <!--
    <string name="facebook_app_id">2136227946607456</string>
