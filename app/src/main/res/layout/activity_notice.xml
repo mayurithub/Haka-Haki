@@ -1,20 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lnr_container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Notice">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+  <!--  <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:text="Hello Android" />
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-    <Button
-        android:layout_width="wrap_content"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/toolbarText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/notice"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/title_text" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>-->
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SUBMIT" />
+        android:background="@android:color/white"
+        app:layout_anchor="@+id/swipe_refresh_layout"
+        app:layout_anchorGravity="left|center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:ignore="NotSibling">
 
-</LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewNotice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@android:color/white"
+        android:paddingBottom="50sp"
+        android:scrollbars="vertical"
+        android:scrollingCache="true" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
+

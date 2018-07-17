@@ -43,6 +43,7 @@ import com.mayurit.hakahaki.Model.DateModel;
 import com.mayurit.hakahaki.Model.NewsListModel;
 
 import com.mayurit.hakahaki.NEEFEJDetail;
+import com.mayurit.hakahaki.Notice;
 import com.mayurit.hakahaki.ProjectDetail;
 
 import com.mayurit.hakahaki.R;
@@ -554,7 +555,7 @@ swipe_refresh =  view.findViewById(R.id.swipe_refresh_layout_category);
                 ((MainActivity) getActivity()).changeFragment(FragmentDocuments.newInstance());
                 break;
             case R.id.notice:
-                intent = new Intent(context, ActivityPostTypeList.class);
+                intent = new Intent(context, Notice.class);
                 intent.putExtra(EXTRA_OBJC, "notice");
                 startActivity(intent);
                 break;

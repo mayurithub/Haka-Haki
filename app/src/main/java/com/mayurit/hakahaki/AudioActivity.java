@@ -57,7 +57,7 @@ public class AudioActivity extends AppCompatActivity {
                 if (!playPause) {
                     btnplay.setImageResource(R.drawable.ic_pause);
                     if (initialStage) {
-                        new Player().execute("http://streaming.hamropatro.com:8004/;stream.mp3&13202692901&duration=99999&id=scplayer&autostart=true");
+                        new Player().execute("http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-nepla_backup");
                     } else {
                         if (!mediaPlayer.isPlaying())
                             mediaPlayer.start();

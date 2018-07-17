@@ -3,7 +3,10 @@ package com.mayurit.hakahaki;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.content.pm.Signature;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -17,6 +20,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Base64;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -35,6 +39,10 @@ import com.androidquery.AQuery;
 import com.androidquery.callback.AjaxCallback;
 import com.androidquery.callback.AjaxStatus;
 import com.bumptech.glide.Glide;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookSdk;
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.widget.ShareDialog;
 import com.mayurit.hakahaki.Adapters.CategoryNewsListAdapter;
 import com.mayurit.hakahaki.Helpers.Constant;
 import com.mayurit.hakahaki.Helpers.RecyclerItemClickListener;
@@ -43,6 +51,8 @@ import com.mayurit.hakahaki.Model.NewsListModel;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -68,10 +78,13 @@ public class ActivityPostDetail extends AppCompatActivity {
     private ProgressBar spinner;
     Button b1;
     SwipeRefreshLayout swipe_refresh_layout;
+    CallbackManager callbackManager;
+    ShareDialog shareDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FacebookSdk.sdkInitialize(this.getApplicationContext());
         setContentView(R.layout.activity_post_detail);
         Intent intent = getIntent();
         refresh();
@@ -87,6 +100,11 @@ public class ActivityPostDetail extends AppCompatActivity {
         txt_guest_author = (TextView) findViewById(R.id.txt_guest_author);
         date = (TextView) findViewById(R.id.date);
         img_full = (ImageView) findViewById(R.id.img_full);
+
+        //facebook share
+        callbackManager = CallbackManager.Factory.create();
+        shareDialog = new ShareDialog(this);
+
         ic_fb = (ImageView) findViewById(R.id.ic_fb);
         ic_tweet = (ImageView) findViewById(R.id.ic_tweet);
         like = (ImageView) findViewById(R.id.like);
@@ -101,7 +119,12 @@ public class ActivityPostDetail extends AppCompatActivity {
         ic_fb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                ShareLinkContent linkContent = new ShareLinkContent.Builder()
+                        .setContentUrl(Uri.parse(post.getPost_url()))
+                        .build();
+                if (ShareDialog.canShow(ShareLinkContent.class)) {
+                    shareDialog.show(linkContent);
+                }
             }
         });
 
@@ -128,6 +151,25 @@ public class ActivityPostDetail extends AppCompatActivity {
         displayApiResult(post);
 
         netCheck();
+        printKEyHash();
+    }
+
+    private void printKEyHash() {
+        try {
+            PackageInfo info = getPackageManager().getPackageInfo("com.mayurit.hakahaki",
+                    PackageManager.GET_SIGNATURES);
+            for(Signature signature : info.signatures)
+            {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d("KeyHash", Base64.encodeToString(md.digest(),Base64.DEFAULT));
+            }
+
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
     }
 
     private void increaseLike() {

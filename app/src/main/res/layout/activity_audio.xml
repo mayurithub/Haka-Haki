@@ -30,7 +30,6 @@
                 app:layout_collapseMode="parallax" />
 
 
-
         </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
@@ -41,6 +40,7 @@
         android:clipToPadding="false"
         android:paddingBottom="?attr/actionBarSize"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="10dp" >
+                android:padding="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -81,19 +81,18 @@
                         android:scaleType="centerCrop"
                         app:srcCompat="@drawable/ic_play" />
 
-     <ImageButton
+                    <ImageButton
                         android:id="@+id/btnpause"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:background="@drawable/circle"
-                        android:padding="10dp" android:visibility="gone"
+                        android:padding="10dp"
                         android:scaleType="centerCrop"
+                        android:visibility="gone"
                         app:srcCompat="@drawable/ic_pause" />
 
 
                 </LinearLayout>
-
-
 
 
                 <LinearLayout

@@ -7,6 +7,7 @@ import com.mayurit.hakahaki.Model.DateModel;
 import com.mayurit.hakahaki.Model.NewsListModel;
 
 
+import com.mayurit.hakahaki.Model.NoticeListModel;
 import com.mayurit.hakahaki.Model.VideoModel;
 import com.mayurit.hakahaki.Model.ProjectModel;
 
@@ -106,6 +107,10 @@ public class RetrofitAPI {
         @Headers("Cache-Control:no-cache")
         @GET("./news-api/detail/")
         Call<NewsListModel> getNEEFEJDetail(@Query("ptype") String ptype, @Query("id") String id);
+
+        @Headers("Cache-Control:no-cache")
+        @GET("./news-api/")
+        Call<List<NoticeListModel>> getNoticeList(@Query("ptype") String ptype, @Query("offset") int offset, @Query("limit") int limit);
 
         @Headers("Cache-Control:no-cache")
         @GET("./news-api/lokpriya/")

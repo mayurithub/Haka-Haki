@@ -12,11 +12,13 @@
     <string name="audio">अडियाे</string>
     <string name="notice">सूचना</string>
     <string name="document">दस्ताबेज</string>
+    <string name="download">download</string>
     <string name="category">Category</string>
     <string name="paani">पानी</string>
     <string name="rate_us">Rate Us</string>
     <string name="home">Home</string>
     <string name="members">members</string>
+    <string name="refresh">refresh</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -125,5 +127,11 @@
     <string name="sp_project">SP project</string>
     <string name="crtn_project">CRTN Project</string>
     <string name="feedback">Feedback</string>
+
+    <!--
+   <string name="facebook_app_id">2136227946607456</string>
+-->
+    <string name="facebook_app_id">248264809295042</string>
+    <string name="facebook_login_protocol_scheme">fb2136227946607456</string>
 
 </resources>

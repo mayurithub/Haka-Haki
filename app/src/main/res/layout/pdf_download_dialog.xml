@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff" android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/rel_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/circle"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+
+                android:paddingRight="8dp"
+                app:srcCompat="@drawable/pdf_logo"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:text="खरिदार वा सो सरह पदको विज्ञापन(धनकुटा):  आन्तरिक प्रतियोगिता - न्याय, न्याय (3)"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btnPreview"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/dlg_shape1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Preview"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/dlg_shape"
+            android:text="Download"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>
